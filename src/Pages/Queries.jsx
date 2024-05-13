@@ -12,7 +12,7 @@ const Queries = () => {
     const[searchText, setSearchText] = useState('');
     const [search, setSearch] = useState('');
 
-
+     const[layout, setLayout] = useState(false);
    //  console.log('query is coming', query);
 
 
@@ -90,27 +90,52 @@ const Queries = () => {
 
 
 
+         <button onClick={() => setLayout(!layout)} className="btn btn-accent mt-20 font-bold">Change Layout</button>
+
+     <div>
+
+                  { layout?
 
 
-        <div className="flex mt-20 flex-col gap-7">
+                  <div className="grid grid-cols-1 lg:grid-cols-3  mt-20 gap-7">
 
-          {/* { 
-          sortItem != [] ?  sortItem?.map(query => <SingleCard key={query._id}
-            query={query}
-            ></SingleCard>) :
+                  {
+                  sortItem?.map(query => <QueryCards key={query._id}
+                  query={query}
+                  ></QueryCards>)
+                  }
 
-          ''
+                  </div>
 
-          } */}
 
+
+        
+       
+           :
+
+           <div className="flex mt-20 flex-col gap-7">
 
            {
-            sortItem?.map(query => <SingleCard key={query._id}
-            query={query}
-            ></SingleCard>)
+           sortItem?.map(query => <SingleCard key={query._id}
+           query={query}
+           ></SingleCard>)
            }
+  
+           </div>
 
-        </div>
+
+         }
+
+
+
+     </div>
+    
+
+
+
+
+
+
 
         </div>
     );
