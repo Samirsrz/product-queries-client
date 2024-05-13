@@ -16,18 +16,7 @@ const Queries = () => {
    //  console.log('query is coming', query);
 
 
-   const handleSort = ( )=>{
-      const result =  [...sortItem].sort((a, b)=>{
-         const dateA = new Date(a.dateTime);
-         const dateB = new Date(b.dateTime);
-         return dateB - dateA;
-
-       
-      })
-      setSortItem(result);
-      console.log('result coming',result);
-   }
-
+  
       console.log('sorted Item ishere',sortItem);
 
    const handleSearch = (e) => {
@@ -49,6 +38,23 @@ const Queries = () => {
    }, [search])
 
 
+   const handleSort = ( )=>{
+      const result =  [...sortItem].sort((a, b)=>{
+         const dateA = new Date(a.dateTime);
+         const dateB = new Date(b.dateTime);
+         return dateA - dateB;
+
+       
+      })
+      setSortItem(result);
+      console.log('result coming',result);
+   }
+
+
+
+
+
+
    useEffect(() => {
 
       handleSort();
@@ -57,12 +63,7 @@ const Queries = () => {
 
    }, [])
 
-    console.log(sortItem);
-
-
-
-    console.log(search);
-
+  
 
    return (
 
@@ -106,11 +107,6 @@ const Queries = () => {
                   }
 
                   </div>
-
-
-
-        
-       
            :
 
            <div className="flex mt-20 flex-col gap-7">
@@ -122,21 +118,9 @@ const Queries = () => {
            }
   
            </div>
-
-
          }
-
-
-
      </div>
     
-
-
-
-
-
-
-
         </div>
     );
 };
