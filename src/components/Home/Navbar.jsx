@@ -74,7 +74,7 @@ const Navbar = ({theme, setTheme}) => {
          
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-4xl font-bold text-red-800">AlternaHub</a>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal items-center justify-center px-1">

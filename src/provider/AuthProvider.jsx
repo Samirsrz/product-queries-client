@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 
 
@@ -63,21 +64,49 @@ const AuthProvider = ({children}) => {
     const unSubscribe = onAuthStateChanged(auth, currentUser => {
 
       
-           const userEmail = currentUser?.email || user.email;
-           const loggedUser= { email: currentUser.email };
-
-           setLoading(true)
+           const userEmail = currentUser?.email || user?.email;
+           const loggedUser= { email: userEmail };
+        
+           setUser(currentUser);
+           setLoading(false)
+          
+          
+          
        if(currentUser) {
 
       
-        setUser(currentUser);
-        console.log(currentUser);
+       
+        console.log('curent user',currentUser);
+  
+  /////////////////////////////////////////
+       
+
+
+        axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials: true})
+       .then(res => {
+         console.log('token response',res.data);
+       })
+          
+////////////////////////////////////////////
 
        }
       
      
       else{
+
+////////////////////////////
+      
+      axios.post('http://localhost:5000/logout',loggedUser,{
+         withCredentials: true
+      })
+       .then(res => console.log(res.data))
+
+
+/////////////////////////
          setUser(null)
+
+
+
       }
        setLoading(false);
     });
