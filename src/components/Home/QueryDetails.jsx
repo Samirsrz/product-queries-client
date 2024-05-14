@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData, useSearchParams } from "react-router-dom";
+import { useLoaderData, useNavigation, useSearchParams } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -15,7 +15,7 @@ const QueryDetails = () => {
     
         const [recommend, setRecommend] = useState([]);
 
-
+    const navigate = useNavigation();
 
 
   const {user} = useContext(AuthContext)
@@ -68,10 +68,12 @@ const QueryDetails = () => {
                         imageHeight: 200,
                         imageAlt: "Custom image"
                       });
+                      navigate('/myRecommendations')
                 }
                 form.reset();
-               
+             
                })
+             
 
     }
 
