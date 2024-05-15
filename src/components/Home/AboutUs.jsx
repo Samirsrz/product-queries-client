@@ -9,14 +9,14 @@ const AboutUs = () => {
      }}
      className='text-center p-24  h-[700px] mt-36 bg-no-repeat bg-cover space-y-5 text-black'
      >
-    <h1 className="text-4xl font-bold ">
+    <h1 className="text-5xl text-red-800 font-bold ">
     About Us
     </h1>
-    <p className="text-2xl font-sembold">Making Homeownership Possible</p>
-<h2 className="text-2xl font-bold">Vision</h2>
-    <p className="text-lg">A world where everyone has access to safe, stable, and free resources to gain affordable housing.</p>
-    <h2 className="text-2xl font-bold">Mission</h2>
-    <p className="text-lg">To empower homeless individuals, low to moderate income families, and veterans to achieve sustainable homeownership through education, support, and access to resources.</p>
+    <p className="text-2xl font-sembold">Working on your queries and  recommending you the best Products</p>
+<h2 className="text-2xl text-red-800  font-bold">Vision</h2>
+    <p className="text-lg">A world where everyone has access to safe, stable, and and use products as they needed.</p>
+    <h2 className="text-2xl text-red-800  font-bold">Mission</h2>
+    <p className="text-lg">Our mission is to build an alternative product system that not only offers innovative solutions and sustainable choices but also inspires conscious consumption and fosters positive change in the way we interact with the world.</p>
 
     </div>
 

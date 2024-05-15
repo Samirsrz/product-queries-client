@@ -63,20 +63,7 @@ const Queries = () => {
    }
 
 
-   // if(sortItem){
-   //    handleSort();
-   // }
-
-
-   // useEffect(() => {
-
-   //    // handleSort();
-
-
-
-   // }, [])
-
-
+  
 
 
 
@@ -112,7 +99,7 @@ const Queries = () => {
          <button onClick={() => setLayout(!layout)} className="btn btn-accent mt-20 font-bold">Change Layout</button>
 
      <div>
-
+     <h1 className="text-center text-red-800 text-5xl font-bold">Here are our All the Queries of a product <br /> made by the Users</h1>
                   { layout?
 
 

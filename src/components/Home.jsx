@@ -3,6 +3,7 @@ import Banner from "./Home/Banner";
 import Slider from "./Home/Slider";
 import QueryCards from "../Pages/QueryCards";
 import AboutUs from "./Home/AboutUs";
+import Faq from "./Home/Faq";
 
 const Home = () => {
 
@@ -25,7 +26,17 @@ const Home = () => {
            }
           </div>
 
-          <AboutUs></AboutUs>
+          <h1 className="text-center text-5xl font-bold">Here are our Frequently Asked Questions</h1>
+         <div className="lg:grid grid-cols-2 md:grid lg:justify-around md:justify-around gap-5 ">
+         <div className=" flex items-center justify-end pt-5 " ><img className="h-96 items-end" src="https://i.ibb.co/km4PqSb/faq-edumantra-net.jpg" alt="" /></div>
+                <div className=" flex  justify-start" >
+                <Faq></Faq>
+                </div>
+         </div>
+
+         <AboutUs></AboutUs>
+
+
         </div>
     );
 };
