@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "./Home/Banner";
 import Slider from "./Home/Slider";
 import QueryCards from "../Pages/QueryCards";
+import AboutUs from "./Home/AboutUs";
 
 const Home = () => {
 
@@ -23,6 +24,8 @@ const Home = () => {
             ></QueryCards>)
            }
           </div>
+
+          <AboutUs></AboutUs>
         </div>
     );
 };

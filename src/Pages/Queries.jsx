@@ -17,7 +17,7 @@ const Queries = () => {
 
 
   
-      console.log('sorted Item ishere',sortItem);
+      // console.log('sorted Item ishere',sortItem);
 
    const handleSearch = (e) => {
          e.preventDefault();
@@ -32,16 +32,28 @@ const Queries = () => {
       fetch(`http://localhost:5000/addQueries1?searchText=${search}`)
       .then(res => res.json())
       .then(data => {
-              setSortItem(data);
+               const result = [...data].sort((a,b) => {
+                  const dateA = new Date(a.dateTime);
+                  const dateB = new Date(b.dateTime);
+                  return dateB - dateA;
+               })
+              setSortItem(result);
       })
-     
+    
+      
+ 
+
    }, [search])
 
+      
+ 
 
    const handleSort = ( )=>{
       const result =  [...sortItem].sort((a, b)=>{
          const dateA = new Date(a.dateTime);
          const dateB = new Date(b.dateTime);
+         console.log('dateTIme A',dateA);
+         console.log('datreTime B',dateB);
          return dateA - dateB;
 
        
@@ -51,17 +63,23 @@ const Queries = () => {
    }
 
 
+   // if(sortItem){
+   //    handleSort();
+   // }
+
+
+   // useEffect(() => {
+
+   //    // handleSort();
+
+
+
+   // }, [])
 
 
 
 
-   useEffect(() => {
 
-      handleSort();
-
-
-
-   }, [])
 
   
 

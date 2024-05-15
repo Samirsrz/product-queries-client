@@ -19,7 +19,7 @@ const Main = () => {
            <div className="bg-orange-500"> <Outlet></Outlet></div>
             <ToastContainer />
          
-          <Footer className="bottom-0"></Footer>
+          <Footer className="bottom-0 h-full"></Footer>
           
         </div>
     );
