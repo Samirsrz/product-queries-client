@@ -27,24 +27,24 @@ const Queries = () => {
    }
 
 
+
    useEffect(() => {
 
-      fetch(`http://localhost:5000/addQueries1?searchText=${search}`)
-      .then(res => res.json())
-      .then(data => {
-               const result = [...data].sort((a,b) => {
-                  const dateA = new Date(a.dateTime);
-                  const dateB = new Date(b.dateTime);
-                  return dateB - dateA;
-               })
-              setSortItem(result);
+    fetch(`https://product-queries-server.vercel.app/addQueries1?searchText=${search}`)
+    .then(res => res.json())
+    .then(data => {
+      const result = [...data].sort((a,b) => {
+         const dateA = new Date(a.dateTime);
+         const dateB = new Date(b.dateTime);
+         return dateB - dateA;
+
+
       })
-    
-      
- 
+      setSortItem(result);
+    })
 
-   }, [search])
 
+   },[search])
       
  
 
@@ -52,14 +52,14 @@ const Queries = () => {
       const result =  [...sortItem].sort((a, b)=>{
          const dateA = new Date(a.dateTime);
          const dateB = new Date(b.dateTime);
-         console.log('dateTIme A',dateA);
-         console.log('datreTime B',dateB);
+         // console.log('dateTIme A',dateA);
+         // console.log('datreTime B',dateB);
          return dateA - dateB;
 
        
       })
       setSortItem(result);
-      console.log('result coming',result);
+      // console.log('result coming',result);
    }
 
 

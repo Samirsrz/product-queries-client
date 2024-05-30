@@ -9,11 +9,11 @@ const RecommendationsForMe = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/recommendationsForMe/${user?.email}`)
+        fetch(`https://product-queries-server.vercel.app/recommendationsForMe/${user?.email}`)
         .then(res => res.json())
         .then(data => {
         // setMyRecom(data);
-        console.log(data);
+        // console.log(data);
         setRecoForMe(data)
         })
         

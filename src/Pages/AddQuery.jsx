@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const AddQuery = () => {
 
      const {user} = useContext(AuthContext);
-      console.log(user);
+    //   console.log(user);
 
 
      const handleAddQuery = (e) =>{
@@ -33,13 +33,13 @@ const AddQuery = () => {
          dateTime
        }
 
-           console.log(queries);
+        //    console.log(queries);
          
     
            
-       axios.post('http://localhost:5000/addQueries',  queries)
+       axios.post('https://product-queries-server.vercel.app/addQueries',  queries)
        .then(res => {
-        console.log(res)
+        // console.log(res)
         if(res.data.insertedId){
             Swal.fire({
                 title: "Sweet!",

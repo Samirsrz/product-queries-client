@@ -28,10 +28,10 @@ const UpdateQuery = () => {
          productName,brandName,productImage,queryTitle,boycottingDetail,
        }
 
-           console.log(queries);
+        //    console.log(queries);
 
        
-           axios.put(`http://localhost:5000/updateQuery/${_id}`, queries)
+           axios.put(`https://product-queries-server.vercel.app/updateQuery/${_id}`, queries)
            .then(res => {
             if(res.data.modifiedCount > 0){
                 Swal.fire({

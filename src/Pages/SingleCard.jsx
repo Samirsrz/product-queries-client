@@ -8,7 +8,7 @@ const SingleCard = ({query}) => {
 
 
     return (
-       <div className="w-[1000px]  mt-16 mx-auto">
+       <div className="w-[1000px]   mt-16 mx-auto">
          <div className="card bg-gradient-to-r from-red-300 to-white card-side bg-base-100 shadow-xl">
         <figure><img className="w-[400px] " src={productImage} alt="Movie"/></figure>
         <div className="card-body space-y-9">

@@ -76,15 +76,15 @@ const AuthProvider = ({children}) => {
 
       
        
-        console.log('curent user',currentUser);
+      //   console.log('curent user',currentUser);
   
   /////////////////////////////////////////
        
 
 
-        axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials: true})
+        axios.post('https://product-queries-server.vercel.app/jwt',loggedUser,{withCredentials: true})
        .then(res => {
-         console.log('token response',res.data);
+         // console.log('token response',res.data);
        })
           
 ////////////////////////////////////////////
@@ -96,10 +96,12 @@ const AuthProvider = ({children}) => {
 
 ////////////////////////////
       
-      axios.post('http://localhost:5000/logout',loggedUser,{
+      axios.post('https://product-queries-server.vercel.app/logout',loggedUser,{
          withCredentials: true
       })
-       .then(res => console.log(res.data))
+       .then(res => {
+         //  console.log(res.data)
+         })
 
 
 /////////////////////////

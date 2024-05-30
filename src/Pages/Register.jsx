@@ -35,7 +35,7 @@ const Register = () => {
      const registerUser = {
          name,email,password,photo
      } 
-     console.log(registerUser);
+    //  console.log(registerUser);
   
      setRegisterError('');
      setSuccess('');
@@ -89,7 +89,7 @@ const Register = () => {
            })
 
 
-        console.log(result.user);
+        // console.log(result.user);
         if(result.user){
          Swal.fire({
              position: "top-end",

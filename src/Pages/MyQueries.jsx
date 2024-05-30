@@ -13,7 +13,7 @@ const MyQueries = () => {
 
   useEffect(() => {
 
-     fetch(`http://localhost:5000/addQueries/${user?.email}`, {credentials:'include'})
+     fetch(`https://product-queries-server.vercel.app/addQueries/${user?.email}`, {credentials:'include'})
      .then(res => res.json())
      .then(data => {
         setItems(data);
@@ -28,7 +28,7 @@ const MyQueries = () => {
 
          })
          setItems(result);
-         console.log(result);
+         // console.log(result);
       }
 
 

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
        {
         path:'/',
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/addQueries`)
+        loader: () => fetch(`https://product-queries-server.vercel.app/addQueries`)
        },
 
        {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
        {
       path: '/queries',
       element: <Queries></Queries>,
-      // loader: ()=> fetch(`http://localhost:5000/addQueries`)
+      // loader: ()=> fetch(`https://product-queries-server.vercel.app/addQueries`)
        
     
     },
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
        {
         path: '/queryDetails/:id',
         element: <QueryDetails></QueryDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/queryDetail/${params.id}`)
+        loader: ({params}) => fetch(`https://product-queries-server.vercel.app/queryDetail/${params.id}`)
 
        },
 
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
        {
         path : '/updateQuery/:id',
         element: <PrivateRoute><UpdateQuery></UpdateQuery></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/queryDetail/${params.id}`)
+        loader: ({params}) => fetch(`https://product-queries-server.vercel.app/queryDetail/${params.id}`)
        }
 
        

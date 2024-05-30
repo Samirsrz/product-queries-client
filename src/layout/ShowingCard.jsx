@@ -13,7 +13,7 @@ const ShowingCard = ({item,items,setItems}) => {
         // const [items, setItems] = useState([]);
 
         const handleDelete = (_id) => {
-            console.log(_id);
+            // console.log(_id);
             Swal.fire({
               title: "Are you sure?",
               text: "You won't be able to revert this!",
@@ -24,13 +24,13 @@ const ShowingCard = ({item,items,setItems}) => {
               confirmButtonText: "Yes, delete it!"
             }).then((result) => {
                if(result.isConfirmed){
-                  fetch(`http://localhost:5000/queryDelete/${_id}`,{
+                  fetch(`https://product-queries-server.vercel.app/queryDelete/${_id}`,{
       
                     method: "DELETE",     
                   })
                   .then(res => res.json())
                   .then(data => {
-                      console.log(data);
+                      // console.log(data);
                   if(data.deletedCount > 0){
                       Swal.fire({
                       title: "Deleted!",

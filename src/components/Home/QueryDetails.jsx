@@ -32,7 +32,7 @@ const QueryDetails = () => {
                     return toast.error('Action not permitted')
                   }
            
-            console.log(email);
+            // console.log(email);
               
                const form = e.target;
                const recommendationProductName = form.recommendationProductName.value;
@@ -55,11 +55,11 @@ const QueryDetails = () => {
                }
 
                
-          console.log(recommendedObject);
+          //  console.log(recommendedObject);
 
-               axios.post('http://localhost:5000/recommendations2',  recommendedObject)
+               axios.post('https://product-queries-server.vercel.app/recommendations2',  recommendedObject)
                .then(res => {
-                console.log(res)
+                // console.log(res)
                 if(res.data.insertedId){
                     Swal.fire({
                         title: "Sweet!",
@@ -81,7 +81,7 @@ const QueryDetails = () => {
 
     useEffect(() => {
 
-      fetch(`http://localhost:5000/recommendations3/${queryId}`)
+      fetch(`https://product-queries-server.vercel.app/recommendations3/${queryId}`)
       .then(res => res.json())
       .then(data => {
       setRecommend(data);

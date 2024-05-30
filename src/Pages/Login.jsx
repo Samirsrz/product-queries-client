@@ -20,7 +20,7 @@ const Login = () => {
          const form = e.target;
          const email = form.email.value;
          const password = form.password.value;
-         console.log(email,password);
+        //  console.log(email,password);
  
       const singInUser = {email,password};
  
@@ -42,7 +42,7 @@ const Login = () => {
  
  
  
-           console.log(result.user);
+          //  console.log(result.user);
            navigate(location ?.state ? location.state : '/');
          })
          .catch(error => {
@@ -52,7 +52,7 @@ const Login = () => {
                  text: `Password did not match`,
                  footer: '<a href="#">Why do I have this issue?</a>'
              });
-           console.log(error);
+          //  console.log(error);
            setLoginError('Password did not match')
          })
    
