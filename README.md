@@ -9,6 +9,7 @@ To run the serverside, create a database into Mongodb and connect it on the serv
 Then open the terminal and write "nodemon index.js" and it will run to your localhost5000. 
 
 Key features: 
+
 1.Query Submission: Users can add queries related to products and receive recommendations.
 2.Search Functionality: Enabled users to search through existing queries using keywords
 3.Sort Functionality: Implemented sorting of queries based on the date of submission
@@ -17,5 +18,6 @@ Technologies: MongoDB, Express.js, Node.js, JavaScript, Html5, Tailwind, Firebas
 
 
 Live link: https://664864c289a77b6fa02685e4--jocular-cuchufli-934cde.netlify.app/
+
 Server Side: https://github.com/Samirsrz/product-queries-server
 
